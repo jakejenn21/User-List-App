@@ -28,16 +28,21 @@ npm install --save react-toastify
 
 ## Usage
 
-# To Start Client
+### Start Client
 
 ```bash
 cd client
 npm start
 ```
 
-# To Start Server
+### Start Server
 
 ```bash
 cd red-sky
 npm start
 ```
+
+### Navigate to Chrome
+
+(http://localhost:3000)
+
