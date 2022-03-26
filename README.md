@@ -4,7 +4,7 @@ Jake Jenn's Coding Submission for Red Sky Technologies. Implemented a basic User
 
 ## Installation
 
-Clone the repository (https://pip.pypa.io/en/stable/)
+Clone the repository (https://github.com/jakejenn21/User-List-App.git)
 
 Make sure to have node installed
 
