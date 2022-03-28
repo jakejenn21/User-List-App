@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@275&family=Montserrat:wght@600;700&display=swap');
 
 h1 {
   /* H1 */
   font-family: "Marcellus", serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 48px;
-  line-height: 58px;
+  line-height: 58px !important;
   text-transform: uppercase;
   display: flex;
   align-items: center;
@@ -17,7 +18,8 @@ h2 {
   /* H2 */
 
   font-family: "Montserrat", serif;
-  font-style: bolder;
+  font-style: normal;
+  font-weight: 600;
   font-size: 24px;
   line-height: 29px;
   /* identical to box height, or 121% */
@@ -31,6 +33,7 @@ h3 {
   /* H3 */
   font-family: "Montserrat", serif;
   font-style: normal;
+  font-weight: 600;
   font-size: 18px;
   line-height: 20px;
   /* identical to box height, or 111% */
@@ -42,6 +45,7 @@ h3 {
 body {
   font-family: "Montserrat", serif;
   font-style: normal;
+  font-weight: 400;
   font-size: 18px;
   line-height: 20px !important;
   letter-spacing: 0px;
@@ -51,7 +55,7 @@ body {
 button {
   font-family: "Montserrat", serif;
   font-style: normal;
-  font-weight: 700 !important;
+  font-weight: 700;
   font-size: 18px;
   line-height: 16px;
   /* identical to box height, or 89% */

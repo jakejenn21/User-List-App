@@ -20,6 +20,7 @@
   margin-right: 184px;
   margin-top: 8px;
   border-radius: nullpx;
+  border: 1px solid #D3D3D3;
 }
 
 .create-new-user-btn {
@@ -33,6 +34,7 @@
   width: 226px;
   margin-left: 980px;
   margin-bottom: 23px;
+  margin-top: 40px;
   border-radius: 0px;
   padding: 10px, 18px, 10px, 18px;
   border: none;
@@ -172,7 +174,7 @@
   width: 62px;
   height: 36px;
 
-  margin-left: 51px;
+  margin-left: 69px;
 
   /* Red */
   background: #dd013f;
@@ -190,6 +192,7 @@
   width: 92px;
   height: 36px;
   margin-left: 24px;
+  margin-right: -16;
   background: #dd013f;
   border: none;
   /* identical to box height, or 89% */
