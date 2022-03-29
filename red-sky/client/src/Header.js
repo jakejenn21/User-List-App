@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css';
 
+// header component
 export default function Header() {
   return (
       <>

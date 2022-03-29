@@ -7,6 +7,8 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
+
+  // fetch initial list of users from endpoint
   React.useEffect(() => {
     fetch("/users")
       .then((res) => res.json())
@@ -15,14 +17,15 @@ function App() {
 
   toast.configure();
 
+
   const [users, setUsers] = React.useState([]);
   const [showPopup, setShowPopup] = React.useState(false);
 
-  // get and store users in node memory
   const togglePopup = () => {
     setShowPopup(!showPopup);
   };
 
+  // delete user from node js memory using endpoint
   const deleteUser = (id) => {
     console.log("entering delete user");
     console.log(id);
@@ -39,24 +42,26 @@ function App() {
     toast(`Deleted user id: ${id}`);
   };
 
-  const updateUser = (updateUser) => {
+  // update user in node js memory by id and new info using endpoint
+  const updateUser = (updatedUser) => {
     console.log("entering update user");
-    console.log("user: ", updateUser);
-    console.log(updateUser.id);
-    fetch(`/users/update/${updateUser.id}`, {
+    console.log("user: ", updatedUser);
+    console.log(updatedUser.id);
+    fetch(`/users/update/${updatedUser.id}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify(updateUser),
+      body: JSON.stringify(updatedUser),
     })
       .then((res) => res.json())
       .then((users) => setUsers(users));
 
-    toast(`Updated user: ${updateUser.first_name} ${updateUser.last_name}`);
+    toast(`Updated user: ${updatedUser.first_name} ${updatedUser.last_name}`);
   };
 
+  // create new user in node js memory by adding new user to array using endpoint
   const createUser = (newUser) => {
     console.log("entering update user");
     console.log("user: ", newUser);
@@ -78,13 +83,15 @@ function App() {
   return (
     <>
       <div className="container">
-        <Header />
 
+        {/* header component */}
+        <Header />
+        {/* create new user button */}
         <button onClick={togglePopup} className="create-new-user-btn">
-          {" "}
           create new user
         </button>
 
+        {/* popup modal */}
         {showPopup && (
           <Popup
             handleClose={togglePopup}
@@ -94,6 +101,7 @@ function App() {
           />
         )}
 
+        {/* user list header */}
         <div className="user-list-container">
           <h2 className="user-list-title">USER LIST</h2>
           <div className="user-list-fields">
@@ -102,8 +110,10 @@ function App() {
             <h3 className="last-name-header">last name</h3>
             <h3 className="email-header">email address</h3>
           </div>
+          {/* user list */}
           {users.map((user, index) => {
             return (
+              //user component
               <User
                 key={user.id}
                 updateUser={updateUser.bind(this)}

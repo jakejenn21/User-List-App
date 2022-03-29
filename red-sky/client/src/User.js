@@ -2,9 +2,13 @@ import React from "react";
 import "./App.css";
 import Popup from "./Popup";
 
+// user compoenet
 export default function User({ deleteUser, updateUser, user }) {
+
+  // popup state
   const [showPopupUser, setShowPopupUser] = React.useState(false);
 
+  // toggle popup handler
   const togglePopup = () => {
     setShowPopupUser(!showPopupUser);
   };

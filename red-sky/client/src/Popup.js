@@ -1,11 +1,15 @@
 import React, {useState} from "react";
 
+// popup component
 export default function Popup({handleClose, isEdit, updateUser, createUser, user}) {
+
+  // states used for fields
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [avatar, setAvatar] = useState("");
 
+  // text for create new/edit existing
   let buttonText = "";
   let headerText = "";
   if(isEdit){
@@ -16,6 +20,7 @@ export default function Popup({handleClose, isEdit, updateUser, createUser, user
     buttonText = "create"
   }
 
+  // submit handler
   const handleSubmit = (e) => {
     e.preventDefault();
     // alert(
@@ -30,9 +35,8 @@ export default function Popup({handleClose, isEdit, updateUser, createUser, user
     //     avatar
     // );
 
-    if(isEdit){
 
-      //update user
+    if(isEdit){
       const updatedUser = {
         id: user.id,
         first_name: firstName,
@@ -46,7 +50,6 @@ export default function Popup({handleClose, isEdit, updateUser, createUser, user
       handleClose();
       
     }else{
-      //update user
       const newUser = {
         first_name: firstName,
         last_name: lastName,
@@ -59,6 +62,8 @@ export default function Popup({handleClose, isEdit, updateUser, createUser, user
       handleClose();
     }
   };
+
+  // functions used in setting state on field change
 
   const handleFirstNameChange = (event) => {
     setFirstName(event.target.value);
@@ -110,7 +115,7 @@ export default function Popup({handleClose, isEdit, updateUser, createUser, user
               }}
             />
 
-            <h3 className="modal-title-email">Email</h3>
+            <h3 className="modal-title-email">email</h3>
             <input
               required
               type="text"
@@ -121,7 +126,7 @@ export default function Popup({handleClose, isEdit, updateUser, createUser, user
               }}
             />
 
-            <h3 className="modal-title-avatar">Avatar Image URL</h3>
+            <h3 className="modal-title-avatar">avatar image url</h3>
             <input
               required
               type="text"

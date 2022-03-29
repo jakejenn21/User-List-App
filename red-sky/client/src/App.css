@@ -1,9 +1,12 @@
+
+/* Container of whole application */
 .container {
   width: auto;
   height: 100%;
   overflow-y: scroll;
 }
 
+/* Title of challenge - REDSKY CODING CHALLENGE */
 .title {
   margin: 0;
   width: 650px;
@@ -47,6 +50,7 @@
   background: #dd013f;
 }
 
+
 .user-list-container {
   z-index: 100;
   height: 100%;
@@ -59,38 +63,34 @@
   box-sizing: border-box;
 }
 
+
 .user-list-title {
   margin: 0;
-  height: 100%;
-  width: 972px;
   right: 234px;
   padding-left: 16px;
-  /* Red */
-  box-sizing: border-box;
+
+  width: 972px;
   height: 48px;
+
+  /* title box */
+  box-sizing: border-box;
   border-radius: 0px;
+  background: #dd013f;
 
-  text-transform: uppercase;
-
-  /* White */
+  /* text color */
   color: white;
   text-align: left;
-
-  /* Red */
-
-  background: #dd013f;
 }
 
 .user {
-  display: flex;
-  align-items: center;
   z-index: -100;
   height: 56px;
   width: 973px;
-  /* Red */
 
+  /* user border */
   border: 1px solid #d3d3d3;
   box-sizing: border-box;
+
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -101,10 +101,10 @@
   height: 100%;
   width: 973px;
   right: 234px;
-  /* Red */
 
   border: 1px solid #d3d3d3;
   box-sizing: border-box;
+
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -167,22 +167,13 @@
 }
 
 .button-edit {
-  /* Type=Edit Icon Button */
-
-  /* Auto layout */
   margin: 0;
   width: 62px;
   height: 36px;
-
   margin-left: 69px;
 
-  /* Red */
   background: #dd013f;
-
-  text-transform: uppercase;
   border: none;
-
-  /* White */
 
   color: #ffffff;
 }
@@ -193,16 +184,12 @@
   height: 36px;
   margin-left: 24px;
   margin-right: -16;
+
   background: #dd013f;
   border: none;
-  /* identical to box height, or 89% */
 
   display: flex;
   align-items: center;
-  letter-spacing: 0.4px;
-  text-transform: uppercase;
-
-  /* White */
 
   color: #ffffff;
 }
@@ -227,36 +214,32 @@
 }
 
 .modal-header {
-  /* Red */
   box-sizing: border-box;
   width: 672px;
   height: 77px;
   border-radius: 0px;
+  padding: 10px;
 
-  text-transform: uppercase;
   display: flex;
   justify-content: left;
   align-items: center;
 
-  /* White */
   color: white;
   text-align: left;
-
-  /* Red */
+  text-transform: uppercase;
 
   background: #dd013f;
-  padding: 10px;
 }
 
 .modal-header-title {
   margin: 0;
-  height: 29px;
-  width: 243px;
   left: 24px;
   top: 24px;
-  border-radius: nullpx;
-  font-size: 24px;
 
+  height: 29px;
+  width: 243px;
+
+  font-size: 24px;
   font-weight: 600;
   line-height: 29px;
   letter-spacing: 0px;
@@ -266,6 +249,7 @@
 .modal-body {
   margin-left: 24px;
   margin-right: 24px;
+
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
 }
@@ -274,6 +258,7 @@
   margin: 0;
   margin-top: 24px;
   margin-left: 24px;
+
   height: 20px;
   width: 115px;
 }
@@ -283,6 +268,7 @@
   padding: 0;
   margin-top: 24px;
   margin-left: 24px;
+
   height: 20px;
   width: 115px;
 }
@@ -291,6 +277,7 @@
   margin: 0;
   margin-top: 24px;
   margin-left: 24px;
+
   height: 20px;
   width: 115px;
 }
@@ -299,6 +286,7 @@
   margin: 0;
   margin-top: 24px;
   margin-left: 24px;
+
   width: 192px;
   height: 20px;
 }
@@ -306,10 +294,12 @@
 .modal-input {
   margin: 0;
   margin-left: 24px;
-  height: 36px;
-  width: 624px;
   left: 0px;
   top: 26px;
+
+  height: 36px;
+  width: 624px;
+
   border-radius: 0px;
   background: #ffffff;
   border: 1px solid #d3d3d3;
@@ -317,63 +307,61 @@
 }
 
 .modal-footer {
-  /* Red */
-  box-sizing: border-box;
   margin-top: 82px;
+  padding-right: 24px;
+
   width: 672px;
   height: 77px;
 
-  text-transform: uppercase;
+  box-sizing: border-box;
+
   display: flex;
   justify-content: right;
   align-items: center;
 
-  padding-right: 24px;
-
-  /* White */
   color: white;
   text-align: left;
+  text-transform: uppercase;
 }
 
 .submit-btn {
-  background: #dd013f;
-  border: none;
-  /* identical to box height, or 89% */
+  height: 36px;
+  width: 138px;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  letter-spacing: 0.4px;
-  text-transform: uppercase;
 
-  /* White */
+  background: #dd013f;
+  border: none;
 
   color: #ffffff;
-
-  height: 36px;
-  width: 138px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
 }
 
 .cancel-btn {
   margin: 0;
   margin-right: 10px;
+  padding-right: 10px;
+
   width: 138px;
   height: 36px;
-  padding-right: 10px;
-  background: white;
-  border: none;
-  /* identical to box height, or 89% */
-  border: 2px solid #dd013f;
-  box-sizing: border-box;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  letter-spacing: 0.4px;
-  text-transform: uppercase;
 
-  /* White */
+  background: white;
+  border: none;
+
+  border: 2px solid #dd013f;
+  box-sizing: border-box;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 16px;
   color: #dd013f;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
 }

@@ -24,8 +24,6 @@ Install toast library
 npm install --save react-toastify
 ```
 
-
-
 ## Usage
 
 ### Start Client
