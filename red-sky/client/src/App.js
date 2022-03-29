@@ -7,7 +7,6 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-
   // fetch initial list of users from endpoint
   React.useEffect(() => {
     fetch("/users")
@@ -16,7 +15,6 @@ function App() {
   }, []);
 
   toast.configure();
-
 
   const [users, setUsers] = React.useState([]);
   const [showPopup, setShowPopup] = React.useState(false);
@@ -83,7 +81,6 @@ function App() {
   return (
     <>
       <div className="container">
-
         {/* header component */}
         <Header />
         {/* create new user button */}
