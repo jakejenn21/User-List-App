@@ -2,14 +2,19 @@ const express = require('express');
 const api_helper = require('./API')
 const app = express();
 const port = process.env.PORT || 4700;
+//const uuid = require("uuid");
 
-const uuid = require("uuid");
 
 app.use(express.json())
 
+// global users array
 let users = [];
+// global id
 let id = 12;
-// //get users
+
+
+/* get users endpoint */
+/* fetched from  https://reqres.in/api/users?page=2*/
 app.get("/users", (req, res) => {
     console.log("entered get users")
 
@@ -29,7 +34,7 @@ app.get("/users", (req, res) => {
   });
 
 
-//delete user
+/* get users endpoint */
 app.delete('/users/delete/:id', (req, res) => {
   console.log("entered user delete endpoint")
   console.log("id: ", req.params.id)
@@ -45,7 +50,7 @@ app.delete('/users/delete/:id', (req, res) => {
   }
 });
 
-//update user
+/* update user endpoint */
 app.post("/users/update/:id", (req, res) => {
   console.log("entered update user endpoint")
   console.log("id: ", req.params.id)
@@ -79,7 +84,7 @@ app.post("/users/update/:id", (req, res) => {
   }
 });
 
-//create new user
+/*create new user endpoint */
 app.post("/users/create", (req, res) => {
   id = id + 1
   const newUser = {
@@ -107,7 +112,7 @@ app.post("/users/create", (req, res) => {
   res.json(users);
 });
 
-// console.log that your server is up and running
+// server is up and running
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
 
